@@ -81,7 +81,7 @@ async function verifySuccess(page) {
     return true;
   } catch (e) {
 
-    warn('Did not reach the "Thank you" confirmation page.------ ()');
+    warn('Did not reach the "Thank you" confirmation page.________________');
     return false;
   }
 }
@@ -288,13 +288,10 @@ async function selectDate(page, dateStr) {
     return;
   }
 
-  // Get the three-letter month abbreviation (e.g., 'Sep')
-  // We use `dt.m - 1` because JavaScript months are 0-indexed (0=Jan, 1=Feb, etc.).
+
   const monthAbbr = new Date(dt.y, dt.m - 1, dt.d).toLocaleString('en-US', { month: 'short' });
 
-  // Create a flexible regular expression that looks for the month abbreviation
-  // and the day number, ignoring everything after it.
-  // The 'i' flag ensures the match is case-insensitive.
+
   const re = new RegExp(`${monthAbbr}\\s*${dt.d}`, 'i');
 
   const ok = await tryClick(
