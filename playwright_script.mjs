@@ -871,11 +871,6 @@ async function main() {
 });
 
 const context = await browser.newContext({
-  proxy: {
-    server: 'http://gw.dataimpulse.com:823',
-    username: 'd7ddd6e520257dcceaaa__cr.us',  
-    password: '5c5ee764922cde9f',   
-  },
   viewport: { width: 1920, height: 1080 },
   userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.7103.48 Safari/537.36',
   locale: 'en-US',
